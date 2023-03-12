@@ -1,0 +1,119 @@
+@font-face {
+	font-family: 'Arial';
+	src: local('Arial'),
+		url(../../assets/fonts/ayar.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+header{
+   max-width: 50rem;
+   margin: auto;
+   margin-top: 0.625rem;
+}
+
+body {
+   background-color: rgb(159, 197, 175);
+   margin: 0;
+   padding: 1.25rem;
+   font-family: Arial, Helvetica, sans-serif;
+   max-width: 50rem;
+   margin: 0.625rem auto;  
+}
+
+hr {
+    max-width: 50rem;
+}
+button {
+   background-color: rgb(159, 197, 175);
+ }
+
+ .container {
+    width: 100%;
+    margin: 2vw auto;
+    border: 0.188 solid rgb(146, 43, 206);
+    border-radius: 0.313rem;
+    background-color: #ae8ab1;
+ }
+
+img {
+   width: 30vw;
+   margin: 2vw;
+}
+
+.bayan-title-container {
+    display: flex;
+    width: 100%;
+    min-height: fit-content;
+    justify-content: space-between;
+}
+
+span {
+   height: fit-content;
+   align-self: center;
+   padding: 0 1vw;
+   font-size: 1.25rem;
+}
+
+.bayan-image {
+   display: none;
+   justify-content: center;
+   margin: 0 auto;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container:hover .bayan-image {
+    display: block;
+    animation: fade_in_show 1s
+}
+
+.container:hover .plus {
+   transform: rotate(45deg);
+   transition: transform 0.3s;
+}
+
+.container:focus .bayan-image{
+    display: block;
+    animation: fade_in_show 1s
+}
+
+.container:focus .plus {
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+}
+
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+}
+
+@media screen and (max-width: 820px) {
+    span {
+        font-size: 0.938rem;
+    }
+    img {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    span {
+        font-size: 0.625rem;
+    }
+    img {
+        width: 60vw;
+    }
+}
